@@ -6,6 +6,6 @@ services:
     volumes:
       - .:/usr/src/depot
     ports:
-      - 5000:5000
-    entrypoint: ["/usr/src/app/entrypoint.sh"]
+      - 3000:3000
+    entrypoint: ["/usr/src/depot/entrypoint.sh"]
     command: ["bin/rails", "server"]

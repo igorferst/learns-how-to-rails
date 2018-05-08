@@ -17,9 +17,9 @@ RUN apt-get install -y yarn
 # RUN apt-get install yarn chromium-chromedriver
 # RUN ln -s /usr/lib/chromium-browser/chromedriver /usr/local/bin
 
-WORKDIR /usr/src/app
+WORKDIR /usr/src/depot
 COPY Gemfile Gemfile
 COPY Gemfile.lock Gemfile.lock
 RUN bundle install
 
-EXPOSE 5000
+EXPOSE 3000
