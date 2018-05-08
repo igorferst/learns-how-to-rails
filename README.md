@@ -25,8 +25,6 @@ Once all of these files are in place, create a new project with
 docker-compose run --entrypoint='' -w /usr/src/ [app name] rails new [app name]
 ```
 
-Do not overwrite `README.md`, but do overwrite `Gemfile`.
-
 Finally, after creating the app, rebuild the container with `docker-compose build`.
 
 ### Commands
