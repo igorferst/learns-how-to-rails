@@ -1,3 +1,7 @@
+## Requirements
+
+Docker Compose 1.18
+
 ## How to use dockerized Rails
 
 ### Setting up a new project
@@ -25,7 +29,7 @@ Do not overwrite `README.md`, but do overwrite `Gemfile`.
 
 Finally, after creating the app, rebuild the container with `docker-compose build`.
 
-## Commands
+### Commands
 
 To start the server (after creating a new app with `rails new`) simply run `docker-compose up`.
 
