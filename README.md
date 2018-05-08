@@ -1,17 +1,15 @@
-Igor learns how to Rails.
-
 ## How to use dockerized Rails
 
-### Setuping up a new project
+### Setting up a new project
 
 A dockerized Rails project requires the following files:
 
 ```
-* Dockerfile
-* docker-compose.yaml
-* entrypoint.sh
-* Gemfile (empty)
-* Gemfile.lock (empty)
+Dockerfile
+docker-compose.yaml
+entrypoint.sh
+Gemfile (empty)
+Gemfile.lock (empty)
 ```
 
 In `docker-compose.yaml`, modify the container name to be your app name and the directory name in
@@ -31,8 +29,10 @@ Finally, after creating the app, rebuild the container with `docker-compose buil
 
 To start the server (after creating a new app with `rails new`) simply run `docker-compose up`.
 
-After the server is app, you can execute arbitrary commands inside the app container with
+After the server is up, you can execute arbitrary commands inside the app container with
 
 ```
 docker-compose exec depot [command]
 ```
+
+for example `docker-compose exec depot rails -v`.
