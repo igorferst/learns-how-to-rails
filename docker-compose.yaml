@@ -4,7 +4,7 @@ services:
   depot:
     build: .
     volumes:
-      - .:/usr/src/app
+      - .:/usr/src/depot
     ports:
       - 5000:5000
     entrypoint: ["/usr/src/app/entrypoint.sh"]
