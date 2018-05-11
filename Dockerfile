@@ -19,10 +19,11 @@ RUN apt-get install -y yarn
 
 # Install SQLite CLI
 RUN dpkg --add-architecture i386
+RUN apt-get update
 RUN apt-get install -y libc6:i386 libncurses5:i386 libstdc++6:i386 zlib1g:i386 unzip
-RUN curl -sS https://www.sqlite.org/2018/sqlite-tools-linux-x86-3230100.zip > /tmp/sqlite.zip
-RUN unzip /tmp/sqlite.zip -d /tmp/sqlite
-RUN ln -s /tmp/sqlite/sqlite-tools-linux-x86-3230100/sqlite3 /usr/local/bin/sqlite3
+RUN curl -sS https://www.sqlite.org/2018/sqlite-tools-linux-x86-3230100.zip > /usr/local/sqlite.zip
+RUN unzip /usr/local/sqlite.zip -d /usr/local/
+RUN ln -s /usr/local/sqlite-tools-linux-x86-3230100/sqlite3 /usr/local/bin
 
 WORKDIR /usr/src/depot
 COPY Gemfile Gemfile
